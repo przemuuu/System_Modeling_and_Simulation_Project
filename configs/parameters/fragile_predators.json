@@ -1,0 +1,42 @@
+{
+    "general": {
+        "grid_width": 60,
+        "grid_height": 40,
+        "grass_regrowth_rate": 0.03,
+        "grass_eat_threshold": 0.2,
+        "grass_eat_amount": 0.4,
+        "simulation_speed": 10,
+        "history_length": 300
+    },
+    "predator": {
+        "initial_predators": 40,
+        "predator_max_energy": 150,
+        "predator_eat_prey_energy": 60,
+        "predator_move_cost": 2,
+        "predator_reproduce_chance": 0.04,
+        "predator_reproduce_energy": 100,
+        "predator_metabolism": 2,
+        "predator_hunt_success": 0.95,
+        "predator_move_distance": 1.0,
+        "predator_max_age": 300,
+        "predator_offspring_investment": 0.4
+    },
+    "prey": {
+        "initial_prey": 80,
+        "prey_max_energy": 100,
+        "prey_eat_grass_energy": 30,
+        "prey_move_cost": 1,
+        "prey_reproduce_chance": 0.04,
+        "prey_reproduce_energy": 60,
+        "prey_metabolism": 1,
+        "prey_escape_chance": 0.02,
+        "prey_move_distance": 1.0,
+        "prey_max_age": 200,
+        "prey_offspring_investment": 0.4
+    },
+    "mutation": {
+        "mutation_min": 0,
+        "mutation_max": 3,
+        "mutation_strength": 0.1
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "header_h": 68,
+    "topbar_h": 38,
+    "sep_h": 1,
+    "footer_h": 78,
+    "win_w": 1020,
+    "win_h": 1000,
+    "row_h": 32,
+    "lbl_w": 238,
+    "cols": 2,
+    "section_header_h": 26,
+    "section_header_gap": 4,
+    "section_gap": 8,
+    "tabs_h": 30,
+    "tabs_gap": 10
+}

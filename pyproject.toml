@@ -1,0 +1,10 @@
+[project]
+name = "miss"
+version = "0.1.0"
+description = "Projekt modelowanie i symulacja systemów"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pygame>=2.6.1",
+    "pygame-gui",
+]

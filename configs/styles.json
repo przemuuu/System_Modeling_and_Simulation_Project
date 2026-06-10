@@ -1,0 +1,65 @@
+{
+  "label": {
+    "font": {
+      "name": "noto_sans",
+      "size": "16"
+    },
+    "colours": {
+      "normal_text": "#f5f5f5"
+    }
+  },
+  "button": {
+    "font": {
+      "name": "noto_sans",
+      "size": "16" 
+    },
+    "colours": {
+      "normal_bg": "#2d6a4f",
+      "hovered_bg": "#40916c",
+      "active_bg": "#1b4332",
+      "normal_text": "#ffffff",
+      "hovered_text": "#ffffff"
+    }
+  },
+  "#title": {
+    "font": {
+      "name": "noto_sans",
+      "size": "24",
+      "bold": "1"
+    }
+  },
+  "#section_header": {
+    "font": {
+      "name": "noto_sans",
+      "size": "18",
+      "bold": "1"
+    },
+    "colours": {
+      "normal_text": "#9be7c4"
+    }
+  },
+  "#section_empty": {
+    "font": {
+      "name": "noto_sans",
+      "size": "14",
+      "italic": "1"
+    },
+    "colours": {
+      "normal_text": "#888888"
+    }
+  },
+  "#tab_active": {
+    "font": {
+      "name": "noto_sans",
+      "size": "16",
+      "bold": "1"
+    },
+    "colours": {
+      "normal_bg": "#9be7c4",
+      "hovered_bg": "#b7efc5",
+      "active_bg": "#9be7c4",
+      "normal_text": "#1b4332",
+      "hovered_text": "#1b4332"
+    }
+  }
+}

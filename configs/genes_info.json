@@ -1,0 +1,77 @@
+{
+    "title": "GENE REFERENCE",
+    "intro_html": "<i>Each animal carries a set of genes inherited from its parent at birth. On reproduction, a random number of genes mutate multiplicatively: <b>gene_new = gene_old &times; (1 + N(0, mutation_strength))</b>. Probability-like genes are clamped to [0, 1].</i>",
+    "genes": [
+        {
+            "name": "eat_energy",
+            "qualifier": null,
+            "description_html": "Energy gained per successful meal. Prey gains it from grass on its cell; predators gain it from catching prey. Final energy is capped at <i>max_energy</i>."
+        },
+        {
+            "name": "move_cost",
+            "qualifier": null,
+            "description_html": "Energy spent per cell moved. Total cost per step equals <i>move_cost &times; cells_moved</i> (see <i>move_distance</i>)."
+        },
+        {
+            "name": "max_energy",
+            "qualifier": null,
+            "description_html": "Upper cap on stored energy. Eating never pushes energy above this value."
+        },
+        {
+            "name": "reproduce_energy",
+            "qualifier": null,
+            "description_html": "Energy threshold for reproduction. The animal must have at least this much energy to attempt reproducing."
+        },
+        {
+            "name": "reproduce_chance",
+            "qualifier": null,
+            "description_html": "Per-step probability of attempting reproduction once above <i>reproduce_energy</i>. Clamped to [0, 1]."
+        },
+        {
+            "name": "escape_chance",
+            "qualifier": "(prey only)",
+            "description_html": "Probability the prey escapes a predator attack on the same cell. The encounter outcome is: <b>P(catch) = hunt_success &times; (1 - escape_chance)</b>. Clamped to [0, 1]."
+        },
+        {
+            "name": "hunt_success",
+            "qualifier": "(predator only)",
+            "description_html": "Predator's catch effectiveness when on the same cell as prey. See <i>escape_chance</i> above. Clamped to [0, 1]."
+        },
+        {
+            "name": "move_distance",
+            "qualifier": null,
+            "description_html": "Cells the animal moves per step. Stored as a float - the integer part is guaranteed cells, the fractional part is the probability of one extra cell (e.g. 1.7 = 1 cell certain + 70% chance of a 2nd). Energy cost (via <i>move_cost</i>) scales linearly with actual cells moved."
+        },
+        {
+            "name": "max_age",
+            "qualifier": null,
+            "description_html": "Age at which senescence (natural death from old age) kicks in. Past <i>max_age</i>, per-step death probability grows linearly: <b>P_death = 0.05 &times; (age / max_age - 1)</b>, capped at 1.0. Most individuals die naturally around 1.3-1.5 &times; max_age. Below max_age there is no aging mortality."
+        },
+        {
+            "name": "metabolism",
+            "qualifier": null,
+            "description_html": "Passive energy drain subtracted every step regardless of activity. Lower metabolism = survives longer between meals; higher = burns out faster but supports more activity."
+        },
+        {
+            "name": "offspring_investment",
+            "qualifier": "(0-1)",
+            "description_html": "Fraction of the parent's current energy transferred to its offspring at birth. Energy is conserved - what the parent loses, the child gains as starting energy. High investment = strong but rare offspring (K strategy); low = many weak offspring (r strategy). Clamped to [0, 1]."
+        }
+    ],
+    "mutation_title": "MUTATION CONTROL",
+    "mutation_intro_html": "<i>Three global parameters in the Mutation section control how genes mutate at reproduction:</i>",
+    "mutation_params": [
+        {
+            "name": "mutation_min",
+            "description_html": "Minimum number of genes that mutate per offspring."
+        },
+        {
+            "name": "mutation_max",
+            "description_html": "Maximum number of genes that mutate per offspring. Per child, a random integer in [mutation_min, mutation_max] genes are randomly selected and mutated."
+        },
+        {
+            "name": "mutation_strength",
+            "description_html": "Standard deviation &sigma; of the multiplicative gaussian noise applied to each mutated gene. <i>mutation_strength = 0.1</i> means a typical mutation changes the gene by about &plusmn;10%."
+        }
+    ]
+}

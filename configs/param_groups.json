@@ -1,0 +1,60 @@
+{
+    "groups": [
+        {
+            "key": "general",
+            "title": "General / Simulation Settings",
+            "params": [
+                "grid_width",
+                "grid_height",
+                "grass_regrowth_rate",
+                "grass_eat_threshold",
+                "grass_eat_amount",
+                "simulation_speed",
+                "history_length"
+            ]
+        },
+        {
+            "key": "predator",
+            "title": "Predator Settings",
+            "params": [
+                "initial_predators",
+                "predator_max_energy",
+                "predator_eat_prey_energy",
+                "predator_move_cost",
+                "predator_reproduce_chance",
+                "predator_reproduce_energy",
+                "predator_metabolism",
+                "predator_hunt_success",
+                "predator_move_distance",
+                "predator_max_age",
+                "predator_offspring_investment"
+            ]
+        },
+        {
+            "key": "prey",
+            "title": "Prey Settings",
+            "params": [
+                "initial_prey",
+                "prey_max_energy",
+                "prey_eat_grass_energy",
+                "prey_move_cost",
+                "prey_reproduce_chance",
+                "prey_reproduce_energy",
+                "prey_metabolism",
+                "prey_escape_chance",
+                "prey_move_distance",
+                "prey_max_age",
+                "prey_offspring_investment"
+            ]
+        },
+        {
+            "key": "mutation",
+            "title": "Mutation Settings",
+            "params": [
+                "mutation_min",
+                "mutation_max",
+                "mutation_strength"
+            ]
+        }
+    ]
+}
