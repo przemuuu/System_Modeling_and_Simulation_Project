@@ -1,5 +1,7 @@
 # Predator-Prey Coevolution Simulation
 
+## Author - Przemysław Popowski
+
 A small program that simulates a tiny ecosystem with three things in it: 
 - **grass**
 - **prey** (*animals that eat grass)*
@@ -147,6 +149,12 @@ If every animal dies, the simulation pauses automatically.
 │       ├── harsh_drought.json      # resource-poor world
 │       ├── fragile_predators.json  # predators overhunt and die out
 │       └── fast_evolution.json     # high mutation, fast gene drift
+├── report/                         # project report
+│   ├── coevolution_simulation.pdf  # compiled PDF report
+│   ├── coevolution_simulation.tex  # LaTeX source
+│   ├── projectreport.cls           # LaTeX class file
+│   ├── bibliography.bib            # references
+│   └── figures/                    # figures used in the report
 ├── screenshots/                    # screenshots used in this README
 ├── config_screen.py                # the setup screen shown before a run
 ├── README.md                       # this file
